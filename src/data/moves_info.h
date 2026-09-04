@@ -945,7 +945,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Wraps and squeezes the foe\n"
             BINDING_TURNS" times with vines, etc."),
         .effect = EFFECT_HIT,
-        .power = 15,
+        .power = 20,
         .type = TYPE_NORMAL,
         .accuracy = B_UPDATED_MOVE_DATA >= GEN_5 ? 90 : 85,
         .pp = 20,

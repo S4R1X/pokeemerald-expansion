@@ -20841,8 +20841,8 @@ static const struct LevelUpMove sBrambleghastLevelUpLearnset[] = {
 #if P_FAMILY_TOEDSCOOL
 static const struct LevelUpMove sToedscoolLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_WRAP),
-    LEVEL_UP_MOVE( 1, MOVE_MUD_SLAP),
     LEVEL_UP_MOVE( 4, MOVE_ABSORB),
+    LEVEL_UP_MOVE( 6, MOVE_MUD_SLAP),
     LEVEL_UP_MOVE( 8, MOVE_POISON_POWDER),
     LEVEL_UP_MOVE( 8, MOVE_STUN_SPORE),
     LEVEL_UP_MOVE(12, MOVE_SUPERSONIC),
