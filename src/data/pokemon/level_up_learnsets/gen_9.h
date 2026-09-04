@@ -8016,7 +8016,7 @@ static const struct LevelUpMove sMawileLevelUpLearnset[] = {
 static const struct LevelUpMove sAronLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
     LEVEL_UP_MOVE( 1, MOVE_HARDEN),
-    LEVEL_UP_MOVE( 4, MOVE_METAL_CLAW),
+    LEVEL_UP_MOVE( 1, MOVE_GASH),
     LEVEL_UP_MOVE( 8, MOVE_ROCK_TOMB),
     LEVEL_UP_MOVE(12, MOVE_ROAR),
     LEVEL_UP_MOVE(16, MOVE_HEADBUTT),
@@ -15266,9 +15266,10 @@ static const struct LevelUpMove sPyroarLevelUpLearnset[] = {
 
 #if P_FAMILY_FLABEBE
 static const struct LevelUpMove sFlabebeLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 1, MOVE_VINE_WHIP),
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
-    LEVEL_UP_MOVE( 6, MOVE_FAIRY_WIND),
+    LEVEL_UP_MOVE( 1, MOVE_LEER),
+    LEVEL_UP_MOVE( 1, MOVE_FAIRY_WIND),
+    LEVEL_UP_MOVE( 8, MOVE_VINE_WHIP),
     LEVEL_UP_MOVE(10, MOVE_SAFEGUARD),
     LEVEL_UP_MOVE(15, MOVE_RAZOR_LEAF),
     LEVEL_UP_MOVE(20, MOVE_WISH),
@@ -15284,9 +15285,10 @@ static const struct LevelUpMove sFlabebeLevelUpLearnset[] = {
 };
 
 static const struct LevelUpMove sFloetteLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 1, MOVE_VINE_WHIP),
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
+    LEVEL_UP_MOVE( 1, MOVE_LEER),
     LEVEL_UP_MOVE( 1, MOVE_FAIRY_WIND),
+    LEVEL_UP_MOVE( 8, MOVE_VINE_WHIP),
     LEVEL_UP_MOVE(10, MOVE_SAFEGUARD),
     LEVEL_UP_MOVE(15, MOVE_RAZOR_LEAF),
     LEVEL_UP_MOVE(20, MOVE_WISH),
@@ -15302,9 +15304,10 @@ static const struct LevelUpMove sFloetteLevelUpLearnset[] = {
 };
 
 static const struct LevelUpMove sFloetteEternalLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 1, MOVE_VINE_WHIP),
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
+    LEVEL_UP_MOVE( 1, MOVE_LEER),
     LEVEL_UP_MOVE( 1, MOVE_FAIRY_WIND),
+    LEVEL_UP_MOVE( 8, MOVE_VINE_WHIP),
     LEVEL_UP_MOVE(10, MOVE_SAFEGUARD),
     LEVEL_UP_MOVE(15, MOVE_RAZOR_LEAF),
     LEVEL_UP_MOVE(20, MOVE_WISH),
@@ -17691,7 +17694,7 @@ static const struct LevelUpMove sDhelmiseLevelUpLearnset[] = {
 static const struct LevelUpMove sJangmoOLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
     LEVEL_UP_MOVE( 1, MOVE_LEER),
-    LEVEL_UP_MOVE( 4, MOVE_PROTECT),
+    LEVEL_UP_MOVE( 1, MOVE_WRASTLE),
     LEVEL_UP_MOVE( 8, MOVE_DRAGON_TAIL),
     LEVEL_UP_MOVE(12, MOVE_SCARY_FACE),
     LEVEL_UP_MOVE(16, MOVE_HEADBUTT),
