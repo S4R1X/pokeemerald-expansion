@@ -5608,13 +5608,13 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
 #if P_FAMILY_JANGMO_O
     [SPECIES_JANGMO_O] =
     {
-        .baseHP        = 45,
-        .baseAttack    = 55,
-        .baseDefense   = 65,
-        .baseSpeed     = 45,
-        .baseSpAttack  = 45,
-        .baseSpDefense = 45,
-        .types = MON_TYPES(TYPE_DRAGON),
+        .baseHP        = 48,
+        .baseAttack    = 58,
+        .baseDefense   = 66,
+        .baseSpeed     = 62,
+        .baseSpAttack  = 46,
+        .baseSpDefense = 40,
+        .types = MON_TYPES(TYPE_DRAGON, TYPE_FIGHTING),
         .catchRate = 45,
         .expYield = 60,
         .evYield_Defense = 1,
