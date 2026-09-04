@@ -6376,6 +6376,57 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .validApprenticeMove = TRUE,
     },
 
+    [MOVE_GASH] =
+    {
+        .name = COMPOUND_STRING("Gash"),
+        .description = COMPOUND_STRING(
+            "A commital strike that may\n"
+            "lower the foe's Defense."),
+        .effect = EFFECT_HIT,
+        .power = 40,
+        .type = TYPE_STEEL,
+        .accuracy = 95,
+        .pp = 30,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_STAT_MINUS,
+            .defense = 1,
+            .chance = 10,
+        }),
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_HornAttack,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_WRASTLE] =
+    {
+        .name = COMPOUND_STRING("Wrastle"),
+        .description = COMPOUND_STRING(
+            "The user attempts to play\n"
+            "not aware of the harm it causes."),
+        .effect = EFFECT_HIT,
+        .power = 45,
+        .type = TYPE_FIGHTING,
+        .accuracy = 95,
+        .pp = 25,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_CUTE,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_PlayRough,
+        .validApprenticeMove = TRUE,
+    },
+
     [MOVE_VITAL_THROW] =
     {
         .name = COMPOUND_STRING("Vital Throw"),
