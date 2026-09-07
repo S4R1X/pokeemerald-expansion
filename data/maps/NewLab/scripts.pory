@@ -1,0 +1,149 @@
+mapscripts NewLab_MapScripts {}
+
+script NewLab_EventScript_PokeballOne {
+
+    lockall
+        if(!(flag(FLAG_SELECTED_JANGMO_O) || flag(FLAG_SELECTED_FLABEBE) || flag(FLAG_SELECTED_ARON))){
+    showmonpic(SPECIES_JANGMO_O, 5,3)
+    msgbox("Do you want to choose Jangmo-o?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_JANGMO_O, 5)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Jangmo-o")
+            removeobject(1)
+            setflag(FLAG_SELECTED_JANGMO_O)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Jangmo-o")
+            removeobject(1)
+            setflag(FLAG_SELECTED_JANGMO_O)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(NewLab_NotChosen)
+        }
+    }
+    else{
+        msgbox("These pokemon are for another trainer.")
+    }
+    waitmessage
+    releaseall
+    end
+ 
+}
+script NewLab_EventScript_PokeballTwo {
+
+    lockall
+    if(!(flag(FLAG_SELECTED_JANGMO_O) || flag(FLAG_SELECTED_FLABEBE) || flag(FLAG_SELECTED_ARON))){
+    showmonpic(SPECIES_FLABEBE, 5,3)
+    msgbox("Do you want to choose Flabebe?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_FLABEBE, 5)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Flabebe")
+            removeobject(2)
+            setflag(FLAG_SELECTED_FLABEBE)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Flabebe")
+            removeobject(2)
+            setflag(FLAG_SELECTED_FLABEBE)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(NewLab_NotChosen)
+    }
+    }
+    else{
+        msgbox("These pokemon are for another trainer.")
+    }
+    waitmessage
+    releaseall
+    end
+ 
+}
+script NewLab_EventScript_PokeballThree {
+
+    lockall
+    if(!(flag(FLAG_SELECTED_JANGMO_O) || flag(FLAG_SELECTED_FLABEBE) || flag(FLAG_SELECTED_ARON))){
+        showmonpic(SPECIES_ARON, 5,3)
+        msgbox("Do you want to choose Aron?", MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES){
+            givemon(SPECIES_ARON, 5)
+            if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+                playfanfare(MUS_OBTAIN_ITEM)
+                msgbox("Recieved Aron")
+                removeobject(3)
+                setflag(FLAG_SELECTED_ARON)
+                call(NicknamePartyMon)
+            }
+            elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+                playfanfare(MUS_OBTAIN_ITEM)
+                msgbox("Recieved Aron")
+                removeobject(3)
+                setflag(FLAG_SELECTED_ARON)
+                call(NicknameBoxMon)
+            }
+            else{
+                hidemonpic
+                msgbox("No More Room")
+            }
+        }
+        else{
+            hidemonpic
+            msgbox(NewLab_NotChosen)
+        }
+    }
+    else{
+        msgbox("These pokemon are for another trainer.")
+    }
+    waitmessage
+    releaseall
+    end
+ 
+}
+ 
+script NicknamePartyMon{
+ 
+    msgbox("Give it a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_GetGiftMonPartySlot)
+        call(Common_EventScript_NameReceivedPartyMon)
+    }
+ 
+ 
+}
+ 
+script NicknameBoxMon{
+ 
+    msgbox("Give it a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_NameReceivedBoxMon)
+    }
+    call(Common_EventScript_TransferredToPC)
+ 
+}
+ 
+text NewLab_NotChosen{
+    "You did not choose the Pokemon"
+}
