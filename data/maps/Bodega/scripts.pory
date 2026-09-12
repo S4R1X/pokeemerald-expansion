@@ -1,0 +1,9 @@
+mapscripts Bodega_MapScripts {}
+
+script You_Dont_Work_Here{
+
+}
+
+script Buy_Goods {
+    
+}

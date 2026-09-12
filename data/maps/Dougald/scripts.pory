@@ -1,0 +1,35 @@
+mapscripts Dougald_MapScripts {}
+
+script Dougald_EventScripts_UniversityBuildingSign{
+    lockall
+    msgbox("Dougald University of
+    Science and Technology")
+    releaseall
+}
+
+script Gym_Trainer_Aspire {
+    lockall
+    faceplayer
+    msgbox("I want to be a gym trainer, but I need 
+    to practice. Would you like to help me?")
+    waitmessage
+    trainerbattle_single(TRAINER_BRENDAN_ROUTE_103_TREECKO, Aspire_Intro, Aspire_Outro)
+    msgbox(PostBattleDialogue, MSGBOX_AUTOCLOSE)
+    waitmessage
+    releaseall
+    // FLAG_UNUSED_0x497
+}
+
+text Aspire_Intro {
+    "One day, I will be the toughest trainer
+    in all of Dougald!"
+}
+
+text Aspire_Outro {
+    "Wow, you really know you stuff!"
+}
+
+text PostBattleDialogue {
+    "I guess I still have a long way to go!
+    Thanks for the battle!"
+}

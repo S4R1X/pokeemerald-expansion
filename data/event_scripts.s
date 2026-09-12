@@ -1738,5 +1738,7 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/scripts/battle_frontier.inc"
 	.include "data/scripts/apricorn_tree.inc"
 	.include "data/scripts/wild_encounter.inc"
-
 	.include "data/maps/NewLab/scripts.inc"
+	.include "data/maps/Dougald/scripts.inc"
+	.include "data/maps/Player_Home/scripts.inc"
+	.include "data/maps/Bodega/scripts.inc"
