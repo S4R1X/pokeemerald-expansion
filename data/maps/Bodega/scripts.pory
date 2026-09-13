@@ -11,6 +11,63 @@ script You_Dont_Work_Here {
     release
 }
 
+script Sell_Rat {
+    lock
+    faceplayer
+    if(flag(FLAG_RECIEVED_WIERD_RAT)){
+        msgbox("I'll let you know if I find
+        any think else in my dumpster.")
+        waitmessage
+        applymovement(2, Return_To_Register)
+        waitmovement
+        release
+        return
+    }
+    msgbox("Check out this weird rat I
+    found in the dumpster outback.
+    I'll sell it to you for 1500p.", MSGBOX_YESNO)
+    waitmessage
+    if(var(VAR_RESULT) == YES){
+        checkmoney(1500)
+        if(var(VAR_RESULT) == TRUE){
+            givemon(SPECIES_RATTATA_ALOLA, 3)
+            if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+                msgbox("eheh, thanks for the cash! Enjoy the rat.")
+                waitmessage
+                playfanfare(MUS_OBTAIN_ITEM)
+                msgbox("Recieved Rattata")
+                setflag(FLAG_RECIEVED_WIERD_RAT)
+                call(NicknamePartyMon)
+            }
+            elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+                msgbox("eheh, thanks for the cash! Enjoy the rat.")
+                waitmessage
+                playfanfare(MUS_OBTAIN_ITEM)
+                msgbox("Recieved Rattata")
+                setflag(FLAG_RECIEVED_WIERD_RAT)
+                call(NicknameBoxMon)
+            }
+            else{
+                hidemonpic
+                msgbox("No More Room")
+                waitmessage
+            }
+            waitmessage
+        }
+        else{
+            msgbox("I am not running a charity!")
+            waitmessage
+        }
+    }
+    else{
+        msgbox("Ugh, fine.")
+        waitmessage
+    }
+    applymovement(2, Return_To_Register)
+    waitmovement
+    release
+}
+
 
 script Buy_Goods {
     //

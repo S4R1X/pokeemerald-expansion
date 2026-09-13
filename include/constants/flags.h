@@ -1226,7 +1226,7 @@
 #define FLAG_SELECTED_JANGMO_O                                      0x494 // Unused Flag
 #define FLAG_SELECTED_FLABEBE                                       0x495 // Unused Flag
 #define FLAG_SELECTED_ARON                                          0x496 // Unused Flag
-#define FLAG_UNUSED_0x497                                           0x497 // Unused Flag
+#define FLAG_RECIEVED_WIERD_RAT                                     0x497 // Unused Flag
 #define FLAG_UNUSED_0x498                                           0x498 // Unused Flag
 #define FLAG_UNUSED_0x499                                           0x499 // Unused Flag
 #define FLAG_UNUSED_0x49A                                           0x49A // Unused Flag
