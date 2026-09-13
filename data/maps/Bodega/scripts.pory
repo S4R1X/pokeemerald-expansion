@@ -1,9 +1,29 @@
 mapscripts Bodega_MapScripts {}
 
-script You_Dont_Work_Here{
-
+script You_Dont_Work_Here {
+    lock
+    applymovement(1, Cashiers_Only)
+    msgbox("Hey kid, you know this is employees only!")
+    waitmessage
+    applymovement(OBJ_EVENT_ID_PLAYER, Access_Denied)
+    applymovement(1, Return_To_Register)
+    waitmovement
+    release
 }
 
+
 script Buy_Goods {
-    
+    //
+}
+
+movement Cashiers_Only {
+    face_down
+}
+
+movement Access_Denied {
+    walk_right
+}
+
+movement Return_To_Register {
+    face_right
 }
